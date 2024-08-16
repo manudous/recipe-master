@@ -7,6 +7,10 @@ import {
   CardContent,
   CardMedia,
 } from "@mui/material";
+import BreakfastImage from "@/core/assets/breakfast.webp";
+import LunchImage from "@/core/assets/lunch.webp";
+import DinnerImage from "@/core/assets/dinner.webp";
+import DessertImage from "@/core/assets/dessert.webp";
 
 export const Home: React.FC = () => {
   return (
@@ -15,30 +19,67 @@ export const Home: React.FC = () => {
         {/* Hero Section */}
         <div style={{ textAlign: "center", padding: "50px 0" }}>
           <Typography variant="h4">
-            Descubre recetas deliciosas con lo que tienes a mano
+            Discover delicious recipes with what you have on hand
           </Typography>
         </div>
 
         {/* Categorías */}
         <Typography variant="h4" style={{ margin: "20px 0" }}>
-          Categorías
+          Categories
         </Typography>
         <Grid container spacing={4}>
-          {["Desayuno", "Almuerzo", "Cena", "Postre"].map((category) => (
-            <Grid item xs={12} sm={6} md={3} key={category}>
-              <Card>
-                <CardMedia
-                  component="img"
-                  height="140"
-                  image={`https://source.unsplash.com/photos/random?${category}`}
-                  alt={category}
-                />
-                <CardContent>
-                  <Typography variant="h6">{category}</Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-          ))}
+          <Grid item xs={12} sm={6} md={3} key="breakfast">
+            <Card>
+              <CardMedia
+                component="img"
+                height="140"
+                image={BreakfastImage}
+                alt="breakfast"
+              />
+              <CardContent>
+                <Typography variant="h6">Breakfast</Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} key="dinner">
+            <Card>
+              <CardMedia
+                component="img"
+                height="140"
+                image={LunchImage}
+                alt="lunch"
+              />
+              <CardContent>
+                <Typography variant="h6">Lunch</Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} key="dinner">
+            <Card>
+              <CardMedia
+                component="img"
+                height="140"
+                image={DinnerImage}
+                alt="dinner"
+              />
+              <CardContent>
+                <Typography variant="h6">Dinner</Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} key="dinner">
+            <Card>
+              <CardMedia
+                component="img"
+                height="140"
+                image={DessertImage}
+                alt="dessert"
+              />
+              <CardContent>
+                <Typography variant="h6">Dessert</Typography>
+              </CardContent>
+            </Card>
+          </Grid>
         </Grid>
 
         {/* Recetas Destacadas */}
