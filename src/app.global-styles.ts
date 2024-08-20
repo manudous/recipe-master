@@ -1,4 +1,8 @@
-:root {
+import { injectGlobal } from "@emotion/css";
+
+/* eslint-disable @typescript-eslint/no-unused-expressions */
+injectGlobal`
+ :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -10,9 +14,7 @@
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
+`;

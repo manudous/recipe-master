@@ -8,7 +8,11 @@ export const AppBar: React.FC = () => {
   return (
     <AppBarComponent
       position="static"
-      style={{ backgroundColor: "#6200EA", padding: "10px 20px" }}
+      style={{
+        padding: "10px 20px",
+        width: "100%",
+        backgroundColor: "#6200EA",
+      }}
     >
       <Toolbar>
         <Typography variant="h6" style={{ flexGrow: 1, fontWeight: "bold" }}>

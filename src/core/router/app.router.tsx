@@ -5,7 +5,7 @@ import { AppBar } from "@/layouts/app-bar.layout";
 
 export const AppRouter: React.FC = () => (
   <BrowserRouter>
-      <AppBar />
+    <AppBar />
     <Routes>
       <Route path={appRoutes.root} element={<HomeScene />} />
       <Route path={appRoutes.recipes} />
